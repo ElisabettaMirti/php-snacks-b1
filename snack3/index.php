@@ -75,9 +75,6 @@ $posts = [
         ]
     ],
 ];
-
-var_dump($posts);
-
 ?>
 
 <!DOCTYPE html>
@@ -85,6 +82,7 @@ var_dump($posts);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=4, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Snack3</title>
 </head>
 <body>
@@ -94,9 +92,9 @@ var_dump($posts);
             <li>
                 Data: <?php echo $key ?>
                 <?php foreach ($date as $post) { ?>
-                <p><?php echo $post["title"] ?></p>
-                <p><?php echo $post["author"] ?></p>
-                <p><?php echo $post["text"] ?></p>
+                <p class="title"><?php echo $post["title"] ?></p>
+                <h3 class="author"><?php echo $post["author"] ?></h3>
+                <h2 class="text"><?php echo $post["text"] ?></h2>
                 <?php } ?>
             </li>
             <?php } ?>
