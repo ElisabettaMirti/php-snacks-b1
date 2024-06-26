@@ -3,6 +3,14 @@ Con un form passare come parametri GET name, mail e age e verificare (cercando i
 sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. 
 Se tutto è ok stampare "", altrimenti "Accesso negato"
 
+<?php 
+
+$name = isset($_GET['name'])? $_GET['name'] : '';
+$mail = isset($_GET['mail'])? $_GET['mail'] : '';
+$age = isset($_GET['age'])? $_GET['age'] : '';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +20,7 @@ Se tutto è ok stampare "", altrimenti "Accesso negato"
 </head>
 <body>
     <main>
-        <form action="./snack2.php" method="GET">
+        <form action="./index.php" method="GET">
             <div class="name">
                 <label for="name">Insert your name:</label>
                 <input type="text" name="name" id="name">
@@ -29,10 +37,12 @@ Se tutto è ok stampare "", altrimenti "Accesso negato"
         </form>
 
         <?php 
-        if (strlen($GET[name]) <= 3 || !str_contains($GET[mail], '@') || !str_contains($GET[mail], '.') || is_numeric($GET[age]) == false){ ?>
-            <h1>Accesso negato</h1>
-        <?php } else ?>
-            <h1>Accesso riuscito</h1>
+        if (strlen($name) >= 3 && str_contains($mail, '@') && str_contains($mail, '.') && is_numeric($age)){ 
+            echo '<h1>Accesso riuscito</h1>' ;
+            } else {
+            echo '<h1>Accesso negato</h1>' ; 
+            }          
+        ?>
     </main>
 </body>
 </html>
