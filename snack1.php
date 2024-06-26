@@ -36,8 +36,11 @@ $calendarioPartite = [
         "puntiCasa" => 67,
         "puntiOspite" => 12,
     ],
-]
+];
 
+foreach($calendarioPartite as  $valore){
+    var_dump($valore);
+};
 
 ?>
 
@@ -50,6 +53,6 @@ $calendarioPartite = [
     <title>Snack 1</title>
 </head>
 <body>
-    
+    <main></main>
 </body>
 </html>
