@@ -29,7 +29,7 @@ Se tutto è ok stampare "", altrimenti "Accesso negato"
         </form>
 
         <?php 
-        if (strlen($GET[name]) <= 3) || (!str_contains($GET[mail], '@')) || (!str_contains($GET[mail], '.')) || (is_numeric($GET[age]) == false){ ?>
+        if (strlen($GET[name]) <= 3 || !str_contains($GET[mail], '@') || !str_contains($GET[mail], '.') || is_numeric($GET[age]) == false){ ?>
             <h1>Accesso negato</h1>
         <?php } else ?>
             <h1>Accesso riuscito</h1>
