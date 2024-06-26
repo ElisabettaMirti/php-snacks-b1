@@ -38,9 +38,7 @@ $calendarioPartite = [
     ],
 ];
 
-foreach($calendarioPartite as  $valore){
-    var_dump($valore);
-};
+
 
 ?>
 
@@ -53,6 +51,17 @@ foreach($calendarioPartite as  $valore){
     <title>Snack 1</title>
 </head>
 <body>
-    <main></main>
+    <main>
+        <h1>RISULTATI:</h1>
+        
+        <?php 
+            foreach($calendarioPartite as $partita){
+                echo '<p>' . 
+                $partita['squadraCasa'] . ' - ' . $partita['squadraOspite'] . ' | ' . $partita['puntiCasa'] . ' - ' . $partita['puntiOspite'] . '</p>';
+            };       
+        
+        ?>
+
+    </main>
 </body>
 </html>
