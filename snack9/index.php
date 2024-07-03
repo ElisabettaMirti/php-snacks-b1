@@ -6,4 +6,4 @@ Cerchiamo di usare il piu' possibile getter e setter per accedere e modificare i
 
 require_once __DIR__ . '/classes/User.php';
 require_once __DIR__ . '/classes/PremiumUser.php';
-require_once __DIR__ . '/classes/Memebership.php';
+require_once __DIR__ . '/classes/Membership.php';
